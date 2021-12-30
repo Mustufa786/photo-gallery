@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/down_arrow.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.2740740740740741" />
+        <entry key="app/src/main/res/drawable/rounded_label.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/rounded_rec.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/top_rounded.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/attributes_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_loading_state.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_photo_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/layout_bottom_sheet_dialog.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/tags_layout.xml" value="0.375" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14166666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.airliftcasestudy.base.networking.response.ImagesResponse.Hit" />
+
+        <variable
+            name="listener"
+            type="com.airliftcasestudy.photogallery.adapter.OnItemClickListener" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/rounded_rec"
+        android:onClick="@{()-> listener.onItemClick(item)}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/imageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/progressBar"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/progress"
+                        app:lottie_repeatMode="restart" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/previewImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageLayout"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:alpha="0.8"
+                    android:background="@drawable/rounded_label"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        app:setImageByImageUrlUsingPicassoOnCircularImageView="@{item.userImageURL}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text="@{item.user}"
+                        android:textSize="12sp"
+                        tools:text="Mustufa Ansari" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_comment"
+                        app:tint="#4CAF50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:singleLine="true"
+                        android:text="@{item.comments.toString()}"
+                        android:textSize="12sp"
+                        tools:text="Mustufa" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/down_arrow"
+                        app:tint="#4CAF50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:singleLine="true"
+                        android:text="@{item.downloads.toString()}"
+                        android:textSize="12sp"
+                        tools:text="Mustufa" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_weight="1"-->
+                <!--                android:gravity="center"-->
+                <!--                android:orientation="horizontal">-->
+
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:layout_width="@dimen/_12sdp"-->
+                <!--                    android:layout_height="@dimen/_12sdp"-->
+                <!--                    android:layout_marginStart="@dimen/_8sdp"-->
+                <!--                    android:src="@drawable/down_arrow" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="@dimen/_4sdp"-->
+                <!--                    android:textSize="13sp"-->
+                <!--                    tools:text="Mustufa" />-->
+                <!--            </LinearLayout>-->
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_weight="1"-->
+                <!--                android:gravity="center"-->
+                <!--                android:orientation="horizontal">-->
+
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:layout_width="@dimen/_12sdp"-->
+                <!--                    android:layout_height="@dimen/_12sdp"-->
+                <!--                    android:layout_marginStart="@dimen/_8sdp"-->
+                <!--                    android:src="@drawable/ic_comment" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="@dimen/_4sdp"-->
+                <!--                    android:textSize="13sp"-->
+                <!--                    tools:text="Mustufa" />-->
+                <!--            </LinearLayout>-->
+
+                <!--            <LinearLayout-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_weight="1"-->
+                <!--                android:gravity="center"-->
+                <!--                android:orientation="horizontal">-->
+
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:layout_width="@dimen/_12sdp"-->
+                <!--                    android:layout_height="@dimen/_12sdp"-->
+                <!--                    android:layout_marginStart="@dimen/_8sdp"-->
+                <!--                    android:src="@drawable/ic_eye" />-->
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="@dimen/_4sdp"-->
+                <!--                    android:textSize="13sp"-->
+                <!--                    tools:text="Mustufa" />-->
+                <!--            </LinearLayout>-->
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
